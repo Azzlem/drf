@@ -36,8 +36,8 @@ class Lessons(models.Model):
 class Payments(models.Model):
 
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, verbose_name='пользователь', related_name='payments')
-    date_pay = models.DateField(verbose_name='дата оплаты', **NULLABLE)
 
+    date_pay = models.DateField(verbose_name='дата оплаты', **NULLABLE)
     curs = models.ForeignKey(Course, on_delete=models.CASCADE, **NULLABLE)
     lesson = models.ForeignKey(Lessons, on_delete=models.CASCADE, **NULLABLE)
 
